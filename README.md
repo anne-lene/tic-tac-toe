@@ -8,6 +8,8 @@ This project implements a simple Tic-Tac-Toe game in Python using classes to man
 This game is played in the terminal, where two players take turns entering their moves. The game will update the board after each move and check for a win or tie condition.
 
 ### Player Class
+Step 1: Defining the Player Class
+The Player class encapsulates the player's information, including their name and marker (X or O). It also handles the player's move, ensuring valid input and checking if the chosen spot on the board is empty.
 
 ```python
 class Player:
@@ -32,8 +34,12 @@ class Player:
             except ValueError as e:
                 print(f"Invalid input: {e}. Try again.")
 ```
+Here, the move method ensures that the player's input is valid and within the bounds of the board. It loops until the player selects a valid, empty spot.
+
 
 ### Board Class
+Step 2: Creating the Board Class
+The Board class manages the game's grid. It can display the board, update it with the player's moves, and check if the board is full or if a specific spot is empty.
 
 ```python
 class Board:
@@ -58,8 +64,11 @@ class Board:
     def is_full(self):
         return all(cell != ' ' for row in self.board for cell in row)
 ```
+This class makes it easy to manage the board's state. The show_board method prints the current state of the board, and update_board updates the board after each move, ensuring that the spot is not already taken.
 
 ### TicTacToe Class
+Step 3: Building the TicTacToe Class
+The TicTacToe class manages the overall game flow, including checking for a win condition and alternating between players.
 
 ```python
 class TicTacToe:
@@ -96,9 +105,10 @@ class TicTacToe:
                 print(f"{self.player2.name} wins!")
         print("END")
 ```
+The check_win method checks for a winning condition by verifying rows, columns, and diagonals. The play method manages the game loop, alternating turns between Player 1 and Player 2 until there's a winner or the board is full (resulting in a tie).
 
 ### Running the Game
-
+To start the game, we instantiate the players, the board, and the game, and then call the play method.
 To start the game, we instantiate the players, the board, and the game, and then call the `play` method.
 
 ```python
