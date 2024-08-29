@@ -9,6 +9,7 @@ This game is played in the terminal, where two players take turns entering their
 
 ### Player Class
 Step 1: Defining the Player Class
+
 The Player class encapsulates the player's information, including their name and marker (X or O). It also handles the player's move, ensuring valid input and checking if the chosen spot on the board is empty.
 
 ```python
@@ -39,6 +40,7 @@ Here, the move method ensures that the player's input is valid and within the bo
 
 ### Board Class
 Step 2: Creating the Board Class
+
 The Board class manages the game's grid. It can display the board, update it with the player's moves, and check if the board is full or if a specific spot is empty.
 
 ```python
@@ -68,6 +70,7 @@ This class makes it easy to manage the board's state. The show_board method prin
 
 ### TicTacToe Class
 Step 3: Building the TicTacToe Class
+
 The TicTacToe class manages the overall game flow, including checking for a win condition and alternating between players.
 
 ```python
